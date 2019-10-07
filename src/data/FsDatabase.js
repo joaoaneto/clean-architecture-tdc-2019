@@ -14,7 +14,7 @@ class FsDatabase {
         } catch (error) {
             db[key] = [content];
         }
-        fs.writeFile(this.filePath, JSON.stringify(db, null, 2));
+        fs.writeFileSync(this.filePath, JSON.stringify(db, null, 2));
     }
 }
 

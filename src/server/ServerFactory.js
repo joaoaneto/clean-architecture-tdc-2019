@@ -15,7 +15,7 @@ class ServerFactory {
         const userController = new UserController(userCreateInteractor);
 
         if (this.settings.type == 'express') {
-            return new ExpressServer(userController);
+            return new ExpressServer(this.settings, userController);
         }
 
         throw new Error('Unexpected server framework supported');
