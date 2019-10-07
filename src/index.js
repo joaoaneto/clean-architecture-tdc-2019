@@ -8,6 +8,7 @@ const settings = {
     },
     server: {
         type: 'express',
+        port: 3000
     }
 }
 

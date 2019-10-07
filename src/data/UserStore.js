@@ -4,7 +4,7 @@ class UserStore {
     }
 
     create(user) {
-        database.save('user', user);
+        this.database.save('user', user);
     }
 }
 

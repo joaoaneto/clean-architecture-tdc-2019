@@ -3,8 +3,14 @@ class UserController {
         this.createUserInteractor = createUserInteractor;
     }
 
-    createUser() {
-        this.createUserInteractor.execute();
+    createUser(req, res) {
+        try {
+            this.createUserInteractor.execute(req.body.name);
+            res.end();
+        } catch (error) {
+            res.status(500).send(error.message);
+        }
+
     }
 }
 
